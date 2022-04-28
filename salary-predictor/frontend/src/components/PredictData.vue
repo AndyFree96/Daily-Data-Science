@@ -39,7 +39,7 @@ export default {
   methods: {
     handleSubmit() {
       axios
-        .post("http://127.0.0.1:5000/salary", {
+        .post(process.env.VUE_APP_PREDICT_API, {
           yearsExperience: this.yearsExperience,
         })
         .then((response) => {
