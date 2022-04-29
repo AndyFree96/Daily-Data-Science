@@ -39,7 +39,7 @@ export default {
   methods: {
     handleSubmit() {
       axios
-        .post(process.env.VUE_APP_PREDICT_API, {
+        .post(`${process.env.VUE_APP_API}/salary`, {
           yearsExperience: this.yearsExperience,
         })
         .then((response) => {
